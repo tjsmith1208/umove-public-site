@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U-Move</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:      #1a6ef5;
+      --blue-dark: #1558cc;
+      --text:      #1a1a1a;
+      --text-soft: #555;
+      --text-muted:#888;
+      --border:    #e5e5e5;
+      --surface:   #f8f9fb;
+      --white:     #ffffff;
+      --radius:    14px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 72px 24px 64px;
+      flex-shrink: 0;
+    }
+
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      opacity: 0.88;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 10px 22px;
+      opacity: 0.9;
+    }
+
+    /* ── Main content ── */
+    main {
+      flex: 1;
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 56px 24px 40px;
+      width: 100%;
+    }
+
+    /* ── Card links ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      transform: translateY(-2px);
+    }
+
+    .card .card-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      line-height: 1.55;
+    }
+
+    .card .card-arrow {
+      display: block;
+      margin-top: 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* ── About blurb ── */
+    .about {
+      border-top: 1px solid var(--border);
+      padding-top: 36px;
+    }
+
+    .about h3 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .about p {
+      font-size: 0.93rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+
+    .about p:last-child { margin-bottom: 0; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 12px;
+    }
+
+    footer .footer-links a {
+      font-size: 0.88rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    footer .footer-links a:hover { text-decoration: underline; }
+
+    footer p {
+      font-size: 0.79rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 420px) {
+      .hero { padding: 52px 18px 48px; }
+      main  { padding: 40px 18px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ── -->
+  <div class="hero">
+    <div class="badge">Now available in select markets</div>
+    <h1>U-Move</h1>
+    <p>Moving help, on your schedule. Connect with local student movers and get an instant quote estimate — all in one app.</p>
+    <p class="coming-soon">U-Move is currently preparing for App Store review.</p>
+  </div>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <!-- ── Quick links ── -->
+    <div class="card-grid">
+      <a class="card" href="support.html">
+        <div class="card-icon">🛟</div>
+        <h2>Support</h2>
+        <p>Get help with a job, account issue, safety concern, or dispute. Contact our team anytime.</p>
+        <span class="card-arrow">Get help &rarr;</span>
+      </a>
+      <a class="card" href="privacy.html">
+        <div class="card-icon">🔒</div>
+        <h2>Privacy Policy</h2>
+        <p>Learn what data U-Move collects, how it's used, and your rights including account deletion.</p>
+        <span class="card-arrow">Read policy &rarr;</span>
+      </a>
+    </div>
+
+    <!-- ── About ── -->
+    <div class="about">
+      <h3>About U-Move</h3>
+      <p>
+        U-Move is a peer-to-peer marketplace connecting people who need moving, hauling,
+        or labor help with local college students who are ready to work.
+      </p>
+      <p>
+        Clients post a job in minutes, get an instant quote estimate, and track their
+        job from request to completion. U-Movers browse open jobs, accept work that fits
+        their schedule, and build a reputation through verified reviews and badges.
+      </p>
+      <p>
+        U-Move does not process or collect payments. All quote amounts are estimates.
+        Payment is arranged directly between the client and the mover after the job.
+      </p>
+      <p>
+        U-Move is not an emergency service. For emergencies, always call 911.
+        For support, contact <a href="mailto:support@umoveapp.com" style="color:var(--blue);">support@umoveapp.com</a>.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:support@umoveapp.com">Contact</a>
+    </div>
+    <p>&copy; 2026 U-Move. All rights reserved.</p>
+    <!-- TODO: Update copyright entity name if your registered business name differs from "U-Move". -->
+  </footer>
+
+</body>
+</html>

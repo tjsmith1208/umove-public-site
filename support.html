@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — U-Move</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:        #1a6ef5;
+      --blue-dark:   #1558cc;
+      --blue-light:  #e8f0fe;
+      --text:        #1a1a1a;
+      --text-soft:   #555;
+      --text-muted:  #888;
+      --border:      #e5e5e5;
+      --surface:     #f8f9fb;
+      --white:       #ffffff;
+      --warn-bg:     #fff8e1;
+      --warn-border: #f9a825;
+      --warn-text:   #6d4c00;
+      --radius:      12px;
+      --radius-sm:   8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--blue);
+      color: var(--white);
+      padding: 48px 20px 40px;
+      text-align: center;
+    }
+
+    .wordmark {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .wordmark span {
+      opacity: 0.75;
+      font-weight: 400;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      opacity: 0.88;
+      margin-top: 4px;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--blue-light);
+      border: 1px solid #c6d8fb;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin: 40px 0 36px;
+      text-align: center;
+    }
+
+    .contact-card p {
+      font-size: 1rem;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .contact-card a.email-link {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      background: var(--white);
+      border: 1.5px solid var(--blue);
+      border-radius: var(--radius-sm);
+      padding: 10px 24px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .contact-card a.email-link:hover,
+    .contact-card a.email-link:focus {
+      background: var(--blue);
+      color: var(--white);
+      outline: none;
+    }
+
+    .contact-card .response-time {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Safety banner ── */
+    .safety-banner {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+
+    .safety-banner .icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .safety-banner p {
+      font-size: 0.93rem;
+      color: var(--warn-text);
+      line-height: 1.55;
+    }
+
+    .safety-banner strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* ── Section headings ── */
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    /* ── FAQ ── */
+    .faq-list {
+      margin-bottom: 48px;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 10px;
+      background: var(--white);
+      transition: box-shadow 0.15s;
+    }
+
+    details[open] {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 18px;
+      font-size: 0.97rem;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      -webkit-appearance: none;
+      gap: 12px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: "+";
+      font-size: 1.25rem;
+      font-weight: 300;
+      color: var(--blue);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-body {
+      padding: 0 18px 18px;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+    }
+
+    .faq-body p + p { margin-top: 10px; }
+
+    .faq-body a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    /* ── Topic cards ── */
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 48px;
+    }
+
+    .topic-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      background: var(--surface);
+    }
+
+    .topic-card .topic-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .topic-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .topic-card p {
+      font-size: 0.87rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    footer .footer-links a {
+      font-size: 0.88rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    footer .footer-links a:hover { text-decoration: underline; }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ── Utility ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 40px 0;
+    }
+
+    main { padding: 0 0 20px; }
+
+    @media (max-width: 480px) {
+      header { padding: 36px 16px 32px; }
+      .contact-card { padding: 22px 18px; }
+      .wordmark { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="wordmark">U-Move <span>/ Support</span></div>
+    <h1>How can we help?</h1>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- ── Contact card ── -->
+      <div class="contact-card">
+        <p>Have a question, job issue, safety concern, or account problem?</p>
+        <a class="email-link" href="mailto:support@umoveapp.com">support@umoveapp.com</a>
+        <!-- TODO: Confirm support@umoveapp.com inbox is monitored before publishing. -->
+        <span class="response-time">We typically respond within 1–2 business days.</span>
+      </div>
+
+      <!-- ── Safety banner ── -->
+      <div class="safety-banner">
+        <div class="icon">🚨</div>
+        <p>
+          <strong>U-Move is not an emergency service.</strong>
+          If you are in danger or experiencing an emergency, call 911 immediately.
+          Do not use this app or email support in an emergency situation.
+        </p>
+      </div>
+
+      <!-- ── What we can help with ── -->
+      <p class="section-label">What we can help with</p>
+      <div class="topic-grid">
+        <div class="topic-card">
+          <div class="topic-icon">📦</div>
+          <h3>Job Issues</h3>
+          <p>Mover didn't show up, job conditions changed, or something went wrong during a move.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">⚖️</div>
+          <h3>Disputes</h3>
+          <p>You can open a dispute directly in the app from the job detail screen. Our team reviews all disputes.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">🛡️</div>
+          <h3>Safety Concerns</h3>
+          <p>If you experienced harassment, unsafe conditions, or inappropriate behavior, contact us right away.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">👤</div>
+          <h3>Account Help</h3>
+          <p>Trouble signing in, updating your profile, or deleting your account? We can help.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">💬</div>
+          <h3>Reviews &amp; Ratings</h3>
+          <p>Questions about a review left on your profile or one you submitted.</p>
+        </div>
+        <div class="topic-card">
+          <div class="topic-icon">📍</div>
+          <h3>Availability &amp; Markets</h3>
+          <p>Questions about where U-Move is currently active or when it's coming to your area.</p>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- ── FAQ ── -->
+      <p class="section-label">Frequently asked questions</p>
+      <div class="faq-list">
+
+        <details>
+          <summary>How does U-Move work?</summary>
+          <div class="faq-body">
+            <p>Clients post a job with a description, pickup and drop-off addresses, and preferred dates. U-Movers in the area browse open jobs and accept ones that fit their schedule. Once a mover accepts, both parties receive a notification and can coordinate for the job.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How are quote estimates calculated?</summary>
+          <div class="faq-body">
+            <p>The app generates an instant estimate based on the number of movers needed, estimated hours, distance, and any optional add-ons (dolly, trailer, pressure washer, etc.). All amounts shown are estimates only.</p>
+            <p>Final payment is agreed upon directly between the client and the mover after the job is completed. U-Move does not process or collect any payments.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Does U-Move process payments?</summary>
+          <div class="faq-body">
+            <p>No. U-Move does not collect or process payments of any kind. The app provides quote estimates to help both parties set expectations before a job begins. Payment is arranged directly between the client and the mover.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I delete my account?</summary>
+          <div class="faq-body">
+            <p>Open the app and go to the <strong>Profile</strong> tab. Scroll to the bottom and tap <strong>Delete Account</strong>. A confirmation prompt will appear — confirm to permanently delete your profile and sign out.</p>
+            <p>If the app asks you to sign out and sign back in first, that's a security step required before account deletion. Sign out, sign back in, then try again.</p>
+            <p>You can also request account deletion by emailing <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What if I have a problem with a job?</summary>
+          <div class="faq-body">
+            <p>You can open a dispute directly from the job detail screen in the app. Our support team reviews all disputes and will follow up via email. You can also email <a href="mailto:support@umoveapp.com">support@umoveapp.com</a> directly to describe the issue.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is U-Move available in my city?</summary>
+          <div class="faq-body">
+            <p>U-Move is currently launching in select university towns and expanding from there. If U-Movers aren't yet active in your area, you can still post a job — we'll work to grow coverage in your market over time.</p>
+            <p>Email us at <a href="mailto:support@umoveapp.com">support@umoveapp.com</a> if you'd like to know about specific cities or want to be notified when U-Move launches near you.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I sign up as a U-Mover?</summary>
+          <div class="faq-body">
+            <p>Download the U-Move app and tap <strong>I'm a U-Mover</strong> on the opening screen. Create your account, fill in your profile details (school, skills, availability), and you'll be ready to browse and accept jobs in your area.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Is U-Move safe to use?</summary>
+          <div class="faq-body">
+            <p>U-Move is designed for moving and labor services between consenting adults. All user accounts are tied to verified email addresses. Clients and movers can see each other's profiles and reviews before agreeing to a job.</p>
+            <p>If you have a safety concern about a specific job or user, contact us immediately at <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>. <strong>For emergencies, always call 911.</strong></p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I change my role from Client to U-Mover (or vice versa)?</summary>
+          <div class="faq-body">
+            <p>Your role is set when you create your account and cannot be changed in the app. If you need a different role, email us at <a href="mailto:support@umoveapp.com">support@umoveapp.com</a> and we can assist.</p>
+          </div>
+        </details>
+
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:support@umoveapp.com">Contact Support</a>
+      <!-- TODO: Replace privacy.html href with your live privacy URL (e.g. https://umoveapp.com/privacy) before publishing. -->
+    </div>
+    <p>&copy; 2026 U-Move. All rights reserved.</p>
+    <!-- TODO: Confirm legal entity name if different from "U-Move" and update copyright line accordingly. -->
+  </footer>
+
+</body>
+</html>

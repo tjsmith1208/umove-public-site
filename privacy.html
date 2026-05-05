@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — U-Move</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #1a6ef5;
+      --blue-dark:  #1558cc;
+      --blue-light: #e8f0fe;
+      --text:       #1a1a1a;
+      --text-soft:  #555;
+      --text-muted: #888;
+      --border:     #e5e5e5;
+      --surface:    #f8f9fb;
+      --white:      #ffffff;
+      --green-bg:   #e8f5e9;
+      --green-border: #a5d6a7;
+      --green-text: #1b5e20;
+      --radius:     12px;
+      --radius-sm:  8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--blue);
+      color: var(--white);
+      padding: 48px 20px 40px;
+      text-align: center;
+    }
+
+    .wordmark {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .wordmark span {
+      opacity: 0.75;
+      font-weight: 400;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      opacity: 0.88;
+      margin-top: 4px;
+    }
+
+    /* ── Effective date bar ── */
+    .effective-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--blue-light);
+      border: 1px solid #c6d8fb;
+      border-radius: var(--radius);
+      padding: 22px 26px;
+      margin: 36px 0;
+    }
+
+    .toc p {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc ol li a {
+      font-size: 0.92rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .toc ol li a:hover { text-decoration: underline; }
+
+    /* ── Prose sections ── */
+    .policy-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 20px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--blue-light);
+    }
+
+    .policy-section p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    /* ── Data tables ── */
+    .data-table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    thead th {
+      background: var(--surface);
+      color: var(--text-soft);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 11px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 11px 14px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    tbody tr:last-child td { border-bottom: none; }
+
+    tbody tr:hover td { background: var(--surface); }
+
+    td .yes  { color: #2e7d32; font-weight: 600; }
+    td .no   { color: var(--text-muted); }
+
+    /* ── Not collected box ── */
+    .not-collected {
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      border-radius: var(--radius-sm);
+      padding: 18px 22px;
+      margin: 14px 0;
+    }
+
+    .not-collected p {
+      font-size: 0.88rem;
+      color: var(--green-text) !important;
+      margin-bottom: 8px;
+    }
+
+    .not-collected p:last-child { margin-bottom: 0; }
+
+    .not-collected strong {
+      display: block;
+      font-size: 0.78rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: var(--green-text);
+    }
+
+    .not-collected ul {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .not-collected ul li {
+      font-size: 0.88rem;
+      color: var(--green-text);
+    }
+
+    /* ── Inline definition list ── */
+    dl.inline-list {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px 16px;
+      font-size: 0.93rem;
+    }
+
+    dl.inline-list dt {
+      font-weight: 700;
+      white-space: nowrap;
+      color: var(--text);
+      align-self: start;
+      padding-top: 1px;
+    }
+
+    dl.inline-list dd {
+      color: var(--text-soft);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 8px 0 44px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    footer .footer-links a {
+      font-size: 0.88rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    footer .footer-links a:hover { text-decoration: underline; }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer p + p { margin-top: 6px; }
+
+    main { padding: 0 0 20px; }
+
+    @media (max-width: 480px) {
+      header { padding: 36px 16px 32px; }
+      .wordmark { font-size: 1.5rem; }
+      dl.inline-list { grid-template-columns: 1fr; gap: 4px 0; }
+      dl.inline-list dt { padding-bottom: 0; }
+      dl.inline-list dd { margin-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="wordmark">U-Move <span>/ Privacy Policy</span></div>
+    <h1>How we handle your data</h1>
+  </header>
+
+  <!-- ── Effective date ── -->
+  <div class="effective-bar">
+    Effective date: May 4, 2026 &nbsp;·&nbsp; Applies to the U-Move iOS application
+    <!-- TODO: Update effective date if this policy is revised before publishing. -->
+  </div>
+
+  <main>
+    <div class="container">
+
+      <!-- ── Intro ── -->
+      <div style="margin-top:36px; margin-bottom:8px;">
+        <p style="font-size:0.95rem; color:var(--text-soft);">
+          U-Move (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy.
+          This policy explains what information we collect when you use the U-Move iOS app,
+          how we use it, what we share, and your rights as a user.
+        </p>
+        <br/>
+        <p style="font-size:0.88rem; color:var(--text-muted);">
+          This is a plain-language summary intended to be transparent and readable.
+          <!-- TODO: Have this policy reviewed by a qualified attorney before publishing. -->
+        </p>
+      </div>
+
+      <!-- ── Table of contents ── -->
+      <div class="toc">
+        <p>Contents</p>
+        <ol>
+          <li><a href="#what-we-collect">Information We Collect</a></li>
+          <li><a href="#how-we-use">How We Use Your Information</a></li>
+          <li><a href="#what-we-share">Data Sharing</a></li>
+          <li><a href="#not-collected">Information We Do Not Collect</a></li>
+          <li><a href="#permissions">App Permissions</a></li>
+          <li><a href="#payments">Payments</a></li>
+          <li><a href="#retention">Data Retention</a></li>
+          <li><a href="#deletion">Account Deletion</a></li>
+          <li><a href="#children">Children&rsquo;s Privacy</a></li>
+          <li><a href="#changes">Changes to This Policy</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ol>
+      </div>
+
+      <!-- ── 1. What we collect ── -->
+      <section class="policy-section" id="what-we-collect">
+        <h2>1. Information We Collect</h2>
+        <p>We collect the following categories of information when you create an account and use the app:</p>
+
+        <div class="data-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Type</th>
+                <th>Details</th>
+                <th>Linked to You</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Name</strong></td>
+                <td>Your display name on your profile</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>Email address</strong></td>
+                <td>Used for account sign-in and support contact</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality, account management</td>
+              </tr>
+              <tr>
+                <td><strong>Phone number</strong></td>
+                <td>Optional — clients only, not required to use the app</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>Profile information</strong></td>
+                <td>U-Movers: school, majors/minors, skill details. Clients: company name (optional).</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>Job information</strong></td>
+                <td>Pickup/drop-off addresses, job description, move date, equipment selections, distance, and photos you attach to a job posting</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>Photos and videos</strong></td>
+                <td>Photos uploaded to job listings or your profile picture</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>User content</strong></td>
+                <td>Job descriptions you write and reviews you submit or receive</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>Device identifier (FCM token)</strong></td>
+                <td>A push notification token issued by Firebase to send job alerts to your device</td>
+                <td><span class="yes">Yes</span></td>
+                <td>Push notifications</td>
+              </tr>
+              <tr>
+                <td><strong>Coarse location</strong></td>
+                <td>Location used only to assist with address input and to show nearby jobs. Not stored continuously.</td>
+                <td><span class="yes">Yes</span></td>
+                <td>App functionality</td>
+              </tr>
+              <tr>
+                <td><strong>Usage / crash data</strong></td>
+                <td>Anonymized analytics and crash reports collected by Firebase (if enabled)</td>
+                <td><span class="no">Not linked to you</span></td>
+                <td>App stability and improvement</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ── 2. How we use ── -->
+      <section class="policy-section" id="how-we-use">
+        <h2>2. How We Use Your Information</h2>
+        <p>We use the information we collect only to operate and improve U-Move:</p>
+        <dl class="inline-list">
+          <dt>Account management</dt>
+          <dd>Creating your account, signing you in, and keeping your profile up to date.</dd>
+          <dt>Job matching</dt>
+          <dd>Showing your posted job to available U-Movers, and showing available jobs to U-Movers in the area.</dd>
+          <dt>Notifications</dt>
+          <dd>Sending push alerts when a mover accepts your job, when a job status changes, or when a dispute is updated.</dd>
+          <dt>Reviews</dt>
+          <dd>Allowing clients to leave star ratings and written reviews after a job is completed, and displaying those reviews on mover profiles.</dd>
+          <dt>Dispute resolution</dt>
+          <dd>Investigating job disputes opened by clients or flagged by movers, and following up via email.</dd>
+          <dt>Support</dt>
+          <dd>Responding to questions, account issues, and safety reports sent to our support email.</dd>
+        </dl>
+      </section>
+
+      <!-- ── 3. Data sharing ── -->
+      <section class="policy-section" id="what-we-share">
+        <h2>3. Data Sharing</h2>
+        <p>
+          <strong>We do not sell your personal information.</strong>
+          We do not share your data with advertisers or data brokers.
+        </p>
+        <p>
+          <strong>Visible to other users:</strong> Job postings (description, addresses, photos, and move date)
+          are visible to authenticated U-Movers browsing the app. Mover profiles (name, school, skills,
+          badges, and reviews) are visible to authenticated clients browsing for movers.
+          No user&rsquo;s email address, phone number, or account credentials are shown to other users.
+        </p>
+        <p>
+          <strong>Firebase (Google):</strong> U-Move uses Firebase as its backend infrastructure,
+          including Firebase Authentication, Firestore (database), Firebase Storage, and
+          Firebase Cloud Messaging (push notifications).
+          Data stored in Firebase is subject to
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google&rsquo;s Privacy Policy</a>.
+        </p>
+        <p>
+          <strong>Legal requirements:</strong> We may disclose information if required to do so by law
+          or in response to a valid legal request.
+        </p>
+      </section>
+
+      <!-- ── 4. Not collected ── -->
+      <section class="policy-section" id="not-collected">
+        <h2>4. Information We Do Not Collect</h2>
+        <div class="not-collected">
+          <strong>U-Move does not collect:</strong>
+          <ul>
+            <li>Payment or financial information — U-Move does not process payments</li>
+            <li>Precise or background location — location is used only during active address entry</li>
+            <li>Contacts from your address book</li>
+            <li>Health or fitness data</li>
+            <li>Browsing history or search history outside the app</li>
+            <li>Any data used to track you across third-party apps or websites</li>
+          </ul>
+        </div>
+        <p style="margin-top:14px;">
+          U-Move does not engage in cross-app or cross-website tracking.
+        </p>
+      </section>
+
+      <!-- ── 5. Permissions ── -->
+      <section class="policy-section" id="permissions">
+        <h2>5. App Permissions</h2>
+        <p>U-Move requests the following iOS permissions. Each permission is optional where noted and is only used for the stated purpose.</p>
+        <div class="data-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>When requested</th>
+                <th>How it is used</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Camera</strong></td>
+                <td>When a client chooses to take a photo during job posting</td>
+                <td>Captures photos of items or spaces to attach to a job listing</td>
+              </tr>
+              <tr>
+                <td><strong>Photo Library</strong></td>
+                <td>When a client chooses to upload an existing photo</td>
+                <td>Selects photos from your library to attach to a job listing or set a profile picture</td>
+              </tr>
+              <tr>
+                <td><strong>Location (When In Use)</strong></td>
+                <td>When the app is in the foreground and you are entering an address</td>
+                <td>Assists with address auto-complete and displays nearby available jobs</td>
+              </tr>
+              <tr>
+                <td><strong>Push Notifications</strong></td>
+                <td>After sign-up, the system will prompt for permission</td>
+                <td>Sends alerts for job acceptances, status changes, and dispute updates</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:12px; font-size:0.88rem; color:var(--text-muted);">
+          All permissions can be revoked at any time in your iPhone Settings &rarr; U-Move.
+        </p>
+      </section>
+
+      <!-- ── 6. Payments ── -->
+      <section class="policy-section" id="payments">
+        <h2>6. Payments</h2>
+        <p>
+          <strong>U-Move does not process or collect payments.</strong>
+          The app displays quote estimates to help clients and movers understand expected costs before a job begins.
+          All amounts shown are clearly labeled as estimates.
+        </p>
+        <p>
+          Payment is arranged directly between the client and the mover after the job is completed.
+          No payment card data, banking information, Apple Pay, or in-app purchase integration
+          is present in the app.
+        </p>
+      </section>
+
+      <!-- ── 7. Retention ── -->
+      <section class="policy-section" id="retention">
+        <h2>7. Data Retention</h2>
+        <p>
+          We retain your account data for as long as your account is active.
+          Completed job records are retained to support dispute resolution and review integrity.
+          When you delete your account, your profile is flagged for removal from our database and
+          your Firebase Authentication account is permanently deleted.
+        </p>
+        <p>
+          Anonymized usage and crash data collected by Firebase may be retained by Google
+          per their own data retention policies.
+        </p>
+      </section>
+
+      <!-- ── 8. Deletion ── -->
+      <section class="policy-section" id="deletion">
+        <h2>8. Account Deletion</h2>
+        <p>You can delete your account at any time, directly inside the app:</p>
+        <ol style="padding-left:20px; font-size:0.94rem; color:var(--text-soft); display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
+          <li>Open U-Move and go to the <strong>Profile</strong> tab.</li>
+          <li>Scroll to the bottom and tap <strong>Delete Account</strong>.</li>
+          <li>Confirm the prompt. Your profile is permanently deleted and you are signed out.</li>
+        </ol>
+        <p>
+          If the app asks you to sign out and sign back in before deleting, this is a security
+          step required by Firebase. Sign out, sign back in, and try again.
+        </p>
+        <p>
+          You may also request account deletion by emailing
+          <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>.
+        </p>
+      </section>
+
+      <!-- ── 9. Children ── -->
+      <section class="policy-section" id="children">
+        <h2>9. Children&rsquo;s Privacy</h2>
+        <p>
+          U-Move is not directed at children under the age of 13 and we do not knowingly
+          collect personal information from anyone under 13. If we learn that we have inadvertently
+          collected information from a child under 13, we will delete it promptly.
+          If you believe a child has provided us with personal information, please contact
+          <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>.
+        </p>
+      </section>
+
+      <!-- ── 10. Changes ── -->
+      <section class="policy-section" id="changes">
+        <h2>10. Changes to This Policy</h2>
+        <p>
+          We may update this privacy policy from time to time. When we do, we will update the
+          effective date at the top of this page. If changes are material, we will notify users
+          via the app or by email before the changes take effect. Continued use of U-Move after
+          a policy update constitutes acceptance of the updated terms.
+        </p>
+      </section>
+
+      <!-- ── 11. Contact ── -->
+      <section class="policy-section" id="contact">
+        <h2>11. Contact Us</h2>
+        <p>
+          For privacy questions, data requests, or account deletion requests, contact us at:
+        </p>
+        <p>
+          <a href="mailto:support@umoveapp.com"><strong>support@umoveapp.com</strong></a>
+          <!-- TODO: Confirm support@umoveapp.com inbox is monitored before publishing. -->
+        </p>
+        <p style="font-size:0.88rem; color:var(--text-muted);">
+          We aim to respond to privacy requests within 5 business days.
+          <!-- TODO: Confirm response time commitment with your team before publishing. -->
+        </p>
+      </section>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-links">
+      <a href="support.html">Support</a>
+      <a href="mailto:support@umoveapp.com">Contact</a>
+      <!-- TODO: Replace href values with live URLs before publishing (e.g. https://umoveapp.com/support). -->
+    </div>
+    <p>U-Move Privacy Policy &mdash; Effective May 4, 2026</p>
+    <p>&copy; 2026 U-Move. All rights reserved.</p>
+    <!-- TODO: Confirm legal entity name if different from "U-Move" and update copyright line accordingly. -->
+  </footer>
+
+</body>
+</html>
