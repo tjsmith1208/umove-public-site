@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — U-Move</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #1a6ef5;
+      --blue-dark:  #1558cc;
+      --blue-light: #e8f0fe;
+      --text:       #1a1a1a;
+      --text-soft:  #555;
+      --text-muted: #888;
+      --border:     #e5e5e5;
+      --surface:    #f8f9fb;
+      --white:      #ffffff;
+      --green-bg:   #e8f5e9;
+      --green-border: #a5d6a7;
+      --green-text: #1b5e20;
+      --radius:     12px;
+      --radius-sm:  8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--blue);
+      color: var(--white);
+      padding: 48px 20px 40px;
+      text-align: center;
+    }
+
+    .wordmark {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .wordmark span {
+      opacity: 0.75;
+      font-weight: 400;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      opacity: 0.88;
+      margin-top: 4px;
+    }
+
+    .effective-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .toc {
+      background: var(--blue-light);
+      border: 1px solid #c6d8fb;
+      border-radius: var(--radius);
+      padding: 22px 26px;
+      margin: 36px 0;
+    }
+
+    .toc p {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .toc ol li a {
+      font-size: 0.92rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .toc ol li a:hover { text-decoration: underline; }
+
+    .policy-section {
+      margin-bottom: 44px;
+      scroll-margin-top: 20px;
+    }
+
+    .policy-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--blue-light);
+    }
+
+    .policy-section p {
+      font-size: 0.95rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-section a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    .policy-section ul,
+    .policy-section ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    footer .footer-links a {
+      font-size: 0.88rem;
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    footer .footer-links a:hover { text-decoration: underline; }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer p + p { margin-top: 6px; }
+
+    main { padding: 0 0 20px; }
+
+    @media (max-width: 480px) {
+      header { padding: 36px 16px 32px; }
+      .wordmark { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="wordmark">U-Move <span>/ Terms of Service</span></div>
+    <h1>Rules for using the platform</h1>
+  </header>
+
+  <!-- ── Effective date ── -->
+  <div class="effective-bar">
+    Effective date: May 12, 2026 &nbsp;·&nbsp; Applies to the U-Move iOS application
+  </div>
+
+  <main>
+    <div class="container">
+
+      <!-- ── Intro ── -->
+      <div style="margin-top:36px; margin-bottom:8px;">
+        <p style="font-size:0.95rem; color:var(--text-soft);">
+          These Terms of Service (&ldquo;Terms&rdquo;) govern your use of the U-Move iOS application
+          (&ldquo;U-Move,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).
+          By creating an account or using U-Move, you agree to these Terms. If you do not agree,
+          do not use the app.
+        </p>
+      </div>
+
+      <!-- ── Table of contents ── -->
+      <div class="toc">
+        <p>Contents</p>
+        <ol>
+          <li><a href="#about">About U-Move</a></li>
+          <li><a href="#eligibility">Eligibility</a></li>
+          <li><a href="#accounts">Accounts</a></li>
+          <li><a href="#client-rules">Client Rules</a></li>
+          <li><a href="#mover-rules">U-Mover Rules</a></li>
+          <li><a href="#payments">Payments &amp; Fees</a></li>
+          <li><a href="#jobs">Job Standards &amp; Safety</a></li>
+          <li><a href="#prohibited">Prohibited Conduct</a></li>
+          <li><a href="#content">User Content</a></li>
+          <li><a href="#termination">Termination</a></li>
+          <li><a href="#disclaimer">Disclaimers</a></li>
+          <li><a href="#liability">Limitation of Liability</a></li>
+          <li><a href="#changes">Changes to These Terms</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ol>
+      </div>
+
+      <!-- ── 1 ── -->
+      <section class="policy-section" id="about">
+        <h2>1. About U-Move</h2>
+        <p>
+          U-Move is a peer-to-peer marketplace that connects clients who need moving or
+          labor assistance (&ldquo;Clients&rdquo;) with individuals who provide those services
+          (&ldquo;U-Movers&rdquo;). U-Move is a platform only — we do not employ U-Movers,
+          direct the manner of their work, or guarantee job availability for either party.
+        </p>
+        <p>
+          U-Movers are independent individuals, not employees or agents of U-Move.
+          U-Move is not a moving company and does not provide moving services directly.
+        </p>
+      </section>
+
+      <!-- ── 2 ── -->
+      <section class="policy-section" id="eligibility">
+        <h2>2. Eligibility</h2>
+        <p>You must be at least 18 years old to create a U-Move account or use the app in any capacity. By using U-Move, you represent and warrant that you are 18 or older.</p>
+        <p>U-Move is currently available only in the United States.</p>
+      </section>
+
+      <!-- ── 3 ── -->
+      <section class="policy-section" id="accounts">
+        <h2>3. Accounts</h2>
+        <p>You are responsible for maintaining the security of your account credentials. You may not share your account with another person or impersonate another user.</p>
+        <p>You must provide accurate information when creating your account. Providing false information — including false identity, false credentials, or a false role — is grounds for immediate account termination.</p>
+        <p>You may delete your account at any time from the Profile tab in the app or by emailing <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>.</p>
+      </section>
+
+      <!-- ── 4 ── -->
+      <section class="policy-section" id="client-rules">
+        <h2>4. Client Rules</h2>
+        <p>As a Client, you agree to:</p>
+        <ul>
+          <li>Post only accurate, good-faith job descriptions — including honest address information, realistic scope, and correct move dates.</li>
+          <li>Not post jobs for illegal activities or services U-Move does not support.</li>
+          <li>Confirm job completion honestly. Marking a job complete when it has not been performed is a violation of these Terms.</li>
+          <li>Arrange payment directly with your U-Mover after the job is completed. U-Move does not process payments on your behalf.</li>
+          <li>Only open a dispute if you have a genuine, good-faith concern about the service provided.</li>
+        </ul>
+      </section>
+
+      <!-- ── 5 ── -->
+      <section class="policy-section" id="mover-rules">
+        <h2>5. U-Mover Rules</h2>
+        <p>As a U-Mover, you agree to:</p>
+        <ul>
+          <li>Only accept jobs you are genuinely able and willing to complete.</li>
+          <li>Arrive on time and perform the work as described in the job posting.</li>
+          <li>Not misrepresent your skills, physical capabilities, or equipment availability.</li>
+          <li>Mark job status transitions (start, pending completion) accurately and promptly.</li>
+          <li>Arrange payment directly with the Client after the job is completed.</li>
+          <li>Not solicit Clients off-platform or request payment through the app in ways that circumvent the agreed quote.</li>
+        </ul>
+      </section>
+
+      <!-- ── 6 ── -->
+      <section class="policy-section" id="payments">
+        <h2>6. Payments &amp; Fees</h2>
+        <p>
+          <strong>U-Move does not process or collect payments.</strong>
+          All dollar amounts shown in the app — including quote estimates, platform fee estimates,
+          and estimated mover payouts — are estimates only and are clearly labeled as such.
+          No payment is charged through the app at any point.
+        </p>
+        <p>
+          Payment for completed jobs is arranged directly between the Client and the U-Mover
+          outside the app, after the job is finished.
+        </p>
+        <p>
+          The platform fee percentage shown in quotes is an estimate to help both parties understand
+          the approximate expected split. Final payment terms are agreed between Client and U-Mover directly.
+        </p>
+        <p>
+          U-Move is not responsible for payment disputes, non-payment, or disagreements about
+          final amounts between Clients and U-Movers.
+        </p>
+      </section>
+
+      <!-- ── 7 ── -->
+      <section class="policy-section" id="jobs">
+        <h2>7. Job Standards &amp; Safety</h2>
+        <p>
+          Both Clients and U-Movers are responsible for their own safety during a job.
+          U-Move is not an emergency service. For any emergency, call 911.
+        </p>
+        <p>
+          U-Move does not conduct background checks on U-Movers or Clients. You use the platform
+          and arrange services at your own risk. We strongly encourage both parties to exercise
+          good judgment before meeting in person.
+        </p>
+        <p>
+          If you experience a safety concern during or after a job, contact us at
+          <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>.
+        </p>
+      </section>
+
+      <!-- ── 8 ── -->
+      <section class="policy-section" id="prohibited">
+        <h2>8. Prohibited Conduct</h2>
+        <p>You may not use U-Move to:</p>
+        <ul>
+          <li>Harass, threaten, or deceive other users.</li>
+          <li>Post fraudulent job listings or accept jobs you do not intend to complete.</li>
+          <li>Attempt to access another user's account or manipulate job records.</li>
+          <li>Submit fake reviews or coordinate with others to inflate or damage a mover's rating.</li>
+          <li>Use the platform for any illegal purpose.</li>
+          <li>Reverse-engineer, scrape, or otherwise interfere with the app or its backend.</li>
+        </ul>
+        <p>Violations may result in immediate account suspension or permanent ban.</p>
+      </section>
+
+      <!-- ── 9 ── -->
+      <section class="policy-section" id="content">
+        <h2>9. User Content</h2>
+        <p>
+          You retain ownership of content you submit to U-Move (job descriptions, photos, and reviews).
+          By submitting content, you grant U-Move a non-exclusive, royalty-free license to store,
+          display, and use that content solely to operate the platform.
+        </p>
+        <p>
+          You are responsible for the accuracy and appropriateness of all content you post.
+          U-Move may remove content that violates these Terms at our discretion.
+        </p>
+      </section>
+
+      <!-- ── 10 ── -->
+      <section class="policy-section" id="termination">
+        <h2>10. Termination</h2>
+        <p>
+          U-Move may suspend or terminate your account at any time for violations of these Terms,
+          fraudulent activity, or behavior that endangers other users.
+        </p>
+        <p>
+          You may terminate your account at any time by using the Delete Account option in the app
+          or by contacting <a href="mailto:support@umoveapp.com">support@umoveapp.com</a>.
+        </p>
+      </section>
+
+      <!-- ── 11 ── -->
+      <section class="policy-section" id="disclaimer">
+        <h2>11. Disclaimers</h2>
+        <p>
+          U-Move is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo; without warranties of any kind,
+          express or implied. We do not warrant that the app will be error-free, uninterrupted,
+          or free of security vulnerabilities.
+        </p>
+        <p>
+          U-Move does not guarantee job availability, mover quality, client reliability,
+          or the accuracy of quote estimates. All estimates are provided for informational purposes only.
+        </p>
+      </section>
+
+      <!-- ── 12 ── -->
+      <section class="policy-section" id="liability">
+        <h2>12. Limitation of Liability</h2>
+        <p>
+          To the fullest extent permitted by applicable law, U-Move and its operators shall not
+          be liable for any indirect, incidental, special, consequential, or punitive damages
+          arising from your use of the platform, including but not limited to property damage,
+          personal injury, payment disputes, or loss of income resulting from jobs arranged
+          through the app.
+        </p>
+        <p>
+          Our total liability to you for any claim arising from use of U-Move shall not exceed
+          the greater of $100 or the amounts you paid to U-Move in the 12 months preceding the claim.
+          Because U-Move does not collect payments, this amount is $0 in most cases.
+        </p>
+      </section>
+
+      <!-- ── 13 ── -->
+      <section class="policy-section" id="changes">
+        <h2>13. Changes to These Terms</h2>
+        <p>
+          We may update these Terms from time to time. When we do, we will update the effective
+          date at the top of this page. If changes are material, we will notify you via the app
+          or by email before the changes take effect. Continued use of U-Move after an update
+          constitutes acceptance of the revised Terms.
+        </p>
+      </section>
+
+      <!-- ── 14 ── -->
+      <section class="policy-section" id="contact">
+        <h2>14. Contact Us</h2>
+        <p>Questions about these Terms? Contact us at:</p>
+        <p>
+          <a href="mailto:support@umoveapp.com"><strong>support@umoveapp.com</strong></a>
+        </p>
+      </section>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:support@umoveapp.com">Contact</a>
+    </div>
+    <p>U-Move Terms of Service &mdash; Effective May 12, 2026</p>
+    <p>&copy; 2026 U-Move. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
