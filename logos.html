@@ -6,266 +6,159 @@
   <title>U-Move Logo Options</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #f0f0f5;
-      padding: 32px 16px 60px;
-      color: #111;
-    }
-    h1 {
-      text-align: center;
-      font-size: 13px;
-      font-weight: 600;
-      color: #888;
-      margin-bottom: 32px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      padding: 28px 16px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    }
-    .sizes {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .size-label {
-      font-size: 9px;
-      color: #bbb;
-      text-align: center;
-      margin-top: 4px;
-      letter-spacing: 0.05em;
-    }
-    .size-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .label {
-      font-size: 11px;
-      font-weight: 600;
-      color: #aaa;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
+    body { font-family: -apple-system, sans-serif; background: #f0f0f5; padding: 32px 16px 60px; }
+    h1 { text-align: center; font-size: 12px; color: #888; margin-bottom: 32px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 500px; margin: 0 auto; }
+    .card { background: #fff; border-radius: 20px; padding: 28px 16px 20px; display: flex; flex-direction: column; align-items: center; gap: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.07); }
+    .sizes { display: flex; align-items: flex-end; gap: 20px; }
+    .size-col { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+    .size-label { font-size: 9px; color: #ccc; letter-spacing: 0.05em; text-transform: uppercase; }
+    .card-label { font-size: 11px; font-weight: 600; color: #aaa; letter-spacing: 0.06em; text-transform: uppercase; }
   </style>
 </head>
 <body>
-  <h1>U-Move — Logo Options</h1>
+  <h1>U-Move — UM Monogram</h1>
   <div class="grid">
 
-    <!-- OPTION 1: Blue rounded square, U + arrow -->
+    <!-- OPTION 1: Navy + Gold — Clean stroke monogram -->
     <div class="card">
       <div class="sizes">
         <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#0057FF"/>
-            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#0A1F44"/>
+            <!-- Combined UM: outer posts become M peaks, V crosses through, U arch at bottom -->
+            <path d="M20,82 L20,14 L50,44 L80,14 L80,82" stroke="#FFB800" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20,82 Q20,95 50,95 Q80,95 80,82" stroke="white" stroke-width="11" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="size-label">Logo</div>
         </div>
         <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#0057FF"/>
-            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#0A1F44"/>
+            <path d="M20,82 L20,14 L50,44 L80,14 L80,82" stroke="#FFB800" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20,82 Q20,95 50,95 Q80,95 80,82" stroke="white" stroke-width="11" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="size-label">Widget</div>
         </div>
       </div>
-      <span class="label">Option 1 · Blue</span>
+      <span class="card-label">Navy + Gold</span>
     </div>
 
-    <!-- OPTION 2: Orange, U with upward arrow -->
+    <!-- OPTION 2: All white strokes on Navy -->
     <div class="card">
       <div class="sizes">
         <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#FF5C35"/>
-            <path d="M22 52 L22 36 Q22 20 40 20 Q58 20 58 36 L58 52" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <polyline points="30,28 40,18 50,28" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#0A1F44"/>
+            <path d="M20,82 L20,14 L50,44 L80,14 L80,82 Q80,95 50,95 Q20,95 20,82" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
           <div class="size-label">Logo</div>
         </div>
         <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#FF5C35"/>
-            <path d="M22 52 L22 36 Q22 20 40 20 Q58 20 58 36 L58 52" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <polyline points="30,28 40,18 50,28" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#0A1F44"/>
+            <path d="M20,82 L20,14 L50,44 L80,14 L80,82 Q80,95 50,95 Q20,95 20,82" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
           <div class="size-label">Widget</div>
         </div>
       </div>
-      <span class="label">Option 2 · Orange</span>
+      <span class="card-label">Navy · All White</span>
     </div>
 
-    <!-- OPTION 3: Dark, teal U + dot -->
+    <!-- OPTION 3: Crimson + White -->
     <div class="card">
       <div class="sizes">
         <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#0f1923"/>
-            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#00C2A8" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <circle cx="40" cy="14" r="5" fill="#00C2A8"/>
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#9B1C1C"/>
+            <path d="M20,82 L20,14 L50,44 L80,14 L80,82 Q80,95 50,95 Q20,95 20,82" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
           <div class="size-label">Logo</div>
         </div>
         <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#0f1923"/>
-            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#00C2A8" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <circle cx="40" cy="14" r="5" fill="#00C2A8"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#9B1C1C"/>
+            <path d="M20,82 L20,14 L50,44 L80,14 L80,82 Q80,95 50,95 Q20,95 20,82" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
           <div class="size-label">Widget</div>
         </div>
       </div>
-      <span class="label">Option 3 · Dark Teal</span>
+      <span class="card-label">Crimson</span>
     </div>
 
-    <!-- OPTION 4: Purple gradient, bold U -->
+    <!-- OPTION 4: Black + Orange accent V -->
     <div class="card">
       <div class="sizes">
         <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g4" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7B61FF"/>
-                <stop offset="100%" stop-color="#C84FFF"/>
-              </linearGradient>
-            </defs>
-            <rect width="80" height="80" rx="18" fill="url(#g4)"/>
-            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#111"/>
+            <!-- Posts + arch in white -->
+            <line x1="20" y1="14" x2="20" y2="82" stroke="white" stroke-width="11" stroke-linecap="round"/>
+            <line x1="80" y1="14" x2="80" y2="82" stroke="white" stroke-width="11" stroke-linecap="round"/>
+            <path d="M20,82 Q20,95 50,95 Q80,95 80,82" stroke="white" stroke-width="11" stroke-linecap="round" fill="none"/>
+            <!-- M V-shape accent in orange -->
+            <path d="M20,14 L50,44 L80,14" stroke="#FF5C35" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
           <div class="size-label">Logo</div>
         </div>
         <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g4b" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7B61FF"/>
-                <stop offset="100%" stop-color="#C84FFF"/>
-              </linearGradient>
-            </defs>
-            <rect width="80" height="80" rx="18" fill="url(#g4b)"/>
-            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" rx="20" fill="#111"/>
+            <line x1="20" y1="14" x2="20" y2="82" stroke="white" stroke-width="11" stroke-linecap="round"/>
+            <line x1="80" y1="14" x2="80" y2="82" stroke="white" stroke-width="11" stroke-linecap="round"/>
+            <path d="M20,82 Q20,95 50,95 Q80,95 80,82" stroke="white" stroke-width="11" stroke-linecap="round" fill="none"/>
+            <path d="M20,14 L50,44 L80,14" stroke="#FF5C35" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
           <div class="size-label">Widget</div>
         </div>
       </div>
-      <span class="label">Option 4 · Purple</span>
+      <span class="card-label">Black + Orange V</span>
     </div>
 
-    <!-- OPTION 5: Black, white U filled bottom -->
+    <!-- OPTION 5: Forest Green + Gold, shield shape -->
     <div class="card">
       <div class="sizes">
         <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#111"/>
-            <path d="M21 20 L21 46 Q21 62 40 62 Q59 62 59 46 L59 20" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <rect x="21" y="52" width="38" height="10" rx="5" fill="#fff"/>
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6,6 L94,6 L94,68 Q50,100 6,68 Z" fill="#1B4332"/>
+            <path d="M20,76 L20,13 L50,40 L80,13 L80,76" stroke="#FFD700" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20,76 Q20,88 50,88 Q80,88 80,76" stroke="white" stroke-width="10" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="size-label">Logo</div>
         </div>
         <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#111"/>
-            <path d="M21 20 L21 46 Q21 62 40 62 Q59 62 59 46 L59 20" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <rect x="21" y="52" width="38" height="10" rx="5" fill="#fff"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6,6 L94,6 L94,68 Q50,100 6,68 Z" fill="#1B4332"/>
+            <path d="M20,76 L20,13 L50,40 L80,13 L80,76" stroke="#FFD700" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20,76 Q20,88 50,88 Q80,88 80,76" stroke="white" stroke-width="10" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="size-label">Widget</div>
         </div>
       </div>
-      <span class="label">Option 5 · Black</span>
+      <span class="card-label">Shield · Green + Gold</span>
     </div>
 
-    <!-- OPTION 6: Green, U with checkmark -->
+    <!-- OPTION 6: Navy shield + Gold -->
     <div class="card">
       <div class="sizes">
         <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#1DB954"/>
-            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <polyline points="30,58 37,65 52,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6,6 L94,6 L94,68 Q50,100 6,68 Z" fill="#0A1F44"/>
+            <path d="M20,76 L20,13 L50,40 L80,13 L80,76" stroke="#FFB800" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20,76 Q20,88 50,88 Q80,88 80,76" stroke="#FFB800" stroke-width="10" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="size-label">Logo</div>
         </div>
         <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#1DB954"/>
-            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
-            <polyline points="30,58 37,65 52,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <svg width="44" height="44" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6,6 L94,6 L94,68 Q50,100 6,68 Z" fill="#0A1F44"/>
+            <path d="M20,76 L20,13 L50,40 L80,13 L80,76" stroke="#FFB800" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M20,76 Q20,88 50,88 Q80,88 80,76" stroke="#FFB800" stroke-width="10" stroke-linecap="round" fill="none"/>
           </svg>
           <div class="size-label">Widget</div>
         </div>
       </div>
-      <span class="label">Option 6 · Green</span>
-    </div>
-
-    <!-- OPTION 7: Sunrise gradient -->
-    <div class="card">
-      <div class="sizes">
-        <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g7" x1="0" y1="80" x2="80" y2="0" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#FF5C35"/>
-                <stop offset="100%" stop-color="#FFB800"/>
-              </linearGradient>
-            </defs>
-            <rect width="80" height="80" rx="18" fill="url(#g7)"/>
-            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
-          </svg>
-          <div class="size-label">Logo</div>
-        </div>
-        <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g7b" x1="0" y1="80" x2="80" y2="0" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#FF5C35"/>
-                <stop offset="100%" stop-color="#FFB800"/>
-              </linearGradient>
-            </defs>
-            <rect width="80" height="80" rx="18" fill="url(#g7b)"/>
-            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
-          </svg>
-          <div class="size-label">Widget</div>
-        </div>
-      </div>
-      <span class="label">Option 7 · Sunset</span>
-    </div>
-
-    <!-- OPTION 8: Navy + gold U -->
-    <div class="card">
-      <div class="sizes">
-        <div class="size-col">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#0A1F44"/>
-            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#FFB800" stroke-width="8" stroke-linecap="round" fill="none"/>
-          </svg>
-          <div class="size-label">Logo</div>
-        </div>
-        <div class="size-col">
-          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="80" height="80" rx="18" fill="#0A1F44"/>
-            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#FFB800" stroke-width="8" stroke-linecap="round" fill="none"/>
-          </svg>
-          <div class="size-label">Widget</div>
-        </div>
-      </div>
-      <span class="label">Option 8 · Navy + Gold</span>
+      <span class="card-label">Shield · Navy + Gold</span>
     </div>
 
   </div>
