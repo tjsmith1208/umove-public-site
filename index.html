@@ -8,8 +8,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --blue:      #1a6ef5;
+      --blue:      #1976D2;
       --blue-dark: #1558cc;
+      --teal:      #00BCD4;
+      --green:     #4CAF50;
       --text:      #1a1a1a;
       --text-soft: #555;
       --text-muted:#888;
@@ -31,23 +33,30 @@
 
     /* ── Hero ── */
     .hero {
-      background: var(--blue);
-      color: var(--white);
+      background: #f1f2f6;
+      color: var(--text);
       text-align: center;
-      padding: 72px 24px 64px;
+      padding: 56px 24px 60px;
       flex-shrink: 0;
+    }
+
+    .hero-logo {
+      margin: 0 auto 24px;
+      width: 120px;
+      height: 120px;
+      display: block;
     }
 
     .hero .badge {
       display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.25);
+      background: linear-gradient(90deg, var(--blue), var(--teal), var(--green));
+      color: white;
       border-radius: 999px;
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      padding: 5px 14px;
+      padding: 5px 16px;
       margin-bottom: 20px;
     }
 
@@ -57,11 +66,12 @@
       letter-spacing: -1px;
       line-height: 1.1;
       margin-bottom: 18px;
+      color: #1a1a2e;
     }
 
     .hero p {
       font-size: clamp(1rem, 2.5vw, 1.15rem);
-      opacity: 0.88;
+      color: var(--text-soft);
       max-width: 480px;
       margin: 0 auto 32px;
       line-height: 1.6;
@@ -69,13 +79,13 @@
 
     .coming-soon {
       display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
+      background: white;
+      border: 1px solid var(--border);
       border-radius: 999px;
       font-size: 0.9rem;
       font-weight: 500;
+      color: var(--text-soft);
       padding: 10px 22px;
-      opacity: 0.9;
     }
 
     /* ── Main content ── */
@@ -133,7 +143,10 @@
       margin-top: 16px;
       font-size: 0.82rem;
       font-weight: 600;
-      color: var(--blue);
+      background: linear-gradient(90deg, var(--blue), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     /* ── About blurb ── */
@@ -147,7 +160,10 @@
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--blue);
+      background: linear-gradient(90deg, var(--blue), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       margin-bottom: 12px;
     }
 
@@ -199,6 +215,37 @@
 
   <!-- ── Hero ── -->
   <div class="hero">
+
+    <!-- Logo -->
+    <svg class="hero-logo" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="heroRibbon" x1="-10" y1="0" x2="210" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#1976D2"/>
+          <stop offset="45%" stop-color="#00BCD4"/>
+          <stop offset="100%" stop-color="#4CAF50"/>
+        </linearGradient>
+        <filter id="heroShadow" x="-20%" y="-50%" width="140%" height="200%">
+          <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000028"/>
+        </filter>
+        <filter id="postShadow" x="-40%" y="-5%" width="180%" height="120%">
+          <feDropShadow dx="2" dy="4" stdDeviation="4" flood-color="#00000038"/>
+        </filter>
+      </defs>
+      <!-- Background -->
+      <rect width="200" height="200" rx="44" fill="#f1f1f6"/>
+      <!-- U arch (behind ribbon) -->
+      <path d="M52,132 L52,156 Q52,184 100,184 Q148,184 148,156 L148,132 L130,132 L130,156 Q130,168 100,168 Q70,168 70,156 L70,132 Z" fill="#2E3A4E"/>
+      <!-- Gradient ribbon weaving behind posts, M-wave in center -->
+      <path d="M -10,94 C 10,92 32,91 52,90 C 57,90 63,89 70,88 C 74,87 79,68 86,63 C 88,62 98,84 100,84 C 102,84 112,62 114,63 C 121,68 126,87 130,88 C 137,89 143,90 148,90 C 168,91 190,92 210,94"
+            stroke="url(#heroRibbon)" stroke-width="24" stroke-linecap="butt" fill="none" filter="url(#heroShadow)"/>
+      <!-- Left post (in front — creates weave illusion) -->
+      <rect x="52" y="20" width="18" height="114" fill="#2E3A4E" filter="url(#postShadow)"/>
+      <rect x="36" y="20" width="50" height="13" rx="3" fill="#2E3A4E"/>
+      <!-- Right post -->
+      <rect x="130" y="20" width="18" height="114" fill="#2E3A4E" filter="url(#postShadow)"/>
+      <rect x="114" y="20" width="50" height="13" rx="3" fill="#2E3A4E"/>
+    </svg>
+
     <div class="badge">Now available in select markets</div>
     <h1>U-Move</h1>
     <p>Moving help, on your schedule. Connect with local student movers and get an instant quote estimate — all in one app.</p>
