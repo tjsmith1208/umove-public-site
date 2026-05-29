@@ -8,147 +8,264 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: #f4f4f6;
-      padding: 40px 20px;
-      color: #1a1a2e;
+      background: #f0f0f5;
+      padding: 32px 16px 60px;
+      color: #111;
     }
     h1 {
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 13px;
       font-weight: 600;
-      color: #555;
-      margin-bottom: 40px;
-      letter-spacing: 0.05em;
+      color: #888;
+      margin-bottom: 32px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      max-width: 1000px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 500px;
       margin: 0 auto;
     }
     .card {
       background: #fff;
-      border-radius: 16px;
-      padding: 48px 32px 28px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border-radius: 20px;
+      padding: 28px 16px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
-    .card.dark {
-      background: #0f0f1a;
+    .sizes {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
-    .card.mid {
-      background: #1a1a2e;
+    .size-label {
+      font-size: 9px;
+      color: #bbb;
+      text-align: center;
+      margin-top: 4px;
+      letter-spacing: 0.05em;
+    }
+    .size-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .label {
-      font-size: 0.75rem;
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      color: #aaa;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #999;
     }
-    .card.dark .label,
-    .card.mid .label { color: #555; }
   </style>
 </head>
 <body>
   <h1>U-Move — Logo Options</h1>
   <div class="grid">
 
-    <!-- Option 1: Wordmark with arrow U -->
+    <!-- OPTION 1: Blue rounded square, U + arrow -->
     <div class="card">
-      <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="52" font-weight="700" fill="#0057FF" letter-spacing="-2">u</text>
-        <text x="38" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="52" font-weight="300" fill="#1a1a2e" letter-spacing="-1">move</text>
-        <line x1="38" y1="60" x2="218" y2="60" stroke="#0057FF" stroke-width="2.5"/>
-      </svg>
-      <span class="label">Option 1 — Bold U + Wordmark</span>
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#0057FF"/>
+            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#0057FF"/>
+            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 1 · Blue</span>
     </div>
 
-    <!-- Option 2: Icon + text, teal/dark -->
+    <!-- OPTION 2: Orange, U with upward arrow -->
     <div class="card">
-      <svg width="200" height="70" viewBox="0 0 200 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- U shape icon -->
-        <path d="M10 10 L10 42 Q10 60 28 60 Q46 60 46 42 L46 10" stroke="#00C2A8" stroke-width="6" stroke-linecap="round" fill="none"/>
-        <!-- arrow right -->
-        <polyline points="38,50 50,60 38,70" fill="none" stroke="#00C2A8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,-10)"/>
-        <text x="62" y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="#1a1a2e" letter-spacing="-0.5">UMOVE</text>
-        <text x="63" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#00C2A8" letter-spacing="3">MOVING MADE EASY</text>
-      </svg>
-      <span class="label">Option 2 — Icon + Tagline (Teal)</span>
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#FF5C35"/>
+            <path d="M22 52 L22 36 Q22 20 40 20 Q58 20 58 36 L58 52" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <polyline points="30,28 40,18 50,28" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#FF5C35"/>
+            <path d="M22 52 L22 36 Q22 20 40 20 Q58 20 58 36 L58 52" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <polyline points="30,28 40,18 50,28" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 2 · Orange</span>
     </div>
 
-    <!-- Option 3: Minimal circle mark + text -->
-    <div class="card dark">
-      <svg width="210" height="70" viewBox="0 0 210 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- circle bg -->
-        <circle cx="35" cy="35" r="30" fill="#FF5C35"/>
-        <!-- U in circle -->
-        <path d="M23 18 L23 36 Q23 50 35 50 Q47 50 47 36 L47 18" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none"/>
-        <!-- text -->
-        <text x="76" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="34" font-weight="700" fill="#ffffff" letter-spacing="-1">Move</text>
-      </svg>
-      <span class="label">Option 3 — Circle Mark (Orange)</span>
-    </div>
-
-    <!-- Option 4: Geometric / tech feel -->
-    <div class="card mid">
-      <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- hexagon -->
-        <polygon points="35,4 61,19 61,49 35,64 9,49 9,19" fill="none" stroke="#7B61FF" stroke-width="3"/>
-        <!-- U inside hex -->
-        <path d="M24 22 L24 40 Q24 52 35 52 Q46 52 46 40 L46 22" stroke="#7B61FF" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <!-- text -->
-        <text x="76" y="37" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#ffffff" letter-spacing="1">U-MOVE</text>
-        <text x="77" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="400" fill="#7B61FF" letter-spacing="3">LOGISTICS</text>
-      </svg>
-      <span class="label">Option 4 — Hex Mark (Purple)</span>
-    </div>
-
-    <!-- Option 5: Clean arrow wordmark -->
+    <!-- OPTION 3: Dark, teal U + dot -->
     <div class="card">
-      <svg width="230" height="70" viewBox="0 0 230 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- arrow integrated in U -->
-        <path d="M10 15 L10 42 Q10 62 30 62 Q50 62 50 42 L50 28" stroke="#111" stroke-width="6" stroke-linecap="round" fill="none"/>
-        <polyline points="42,18 52,28 62,18" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- divider -->
-        <line x1="78" y1="10" x2="78" y2="60" stroke="#e0e0e0" stroke-width="1.5"/>
-        <!-- text -->
-        <text x="90" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="38" font-weight="300" fill="#111" letter-spacing="-1">move</text>
-      </svg>
-      <span class="label">Option 5 — Arrow U + Light Weight</span>
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#0f1923"/>
+            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#00C2A8" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="40" cy="14" r="5" fill="#00C2A8"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#0f1923"/>
+            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#00C2A8" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <circle cx="40" cy="14" r="5" fill="#00C2A8"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 3 · Dark Teal</span>
     </div>
 
-    <!-- Option 6: Stacked all-caps bold -->
+    <!-- OPTION 4: Purple gradient, bold U -->
     <div class="card">
-      <svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="200" height="80" rx="8" fill="#F0F4FF"/>
-        <text x="100" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="32" font-weight="900" fill="#0057FF" text-anchor="middle" letter-spacing="6">U-MOVE</text>
-        <text x="100" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="500" fill="#555" text-anchor="middle" letter-spacing="4">YOUR MOVE. SIMPLIFIED.</text>
-      </svg>
-      <span class="label">Option 6 — Stacked Badge (Blue)</span>
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g4" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B61FF"/>
+                <stop offset="100%" stop-color="#C84FFF"/>
+              </linearGradient>
+            </defs>
+            <rect width="80" height="80" rx="18" fill="url(#g4)"/>
+            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g4b" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B61FF"/>
+                <stop offset="100%" stop-color="#C84FFF"/>
+              </linearGradient>
+            </defs>
+            <rect width="80" height="80" rx="18" fill="url(#g4b)"/>
+            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 4 · Purple</span>
     </div>
 
-    <!-- Option 7: Split color wordmark -->
+    <!-- OPTION 5: Black, white U filled bottom -->
     <div class="card">
-      <svg width="230" height="70" viewBox="0 0 230 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="55" font-weight="800" fill="#FF5C35" letter-spacing="-3">U</text>
-        <text x="40" y="55" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="55" font-weight="800" fill="#1a1a2e" letter-spacing="-3">MOVE</text>
-      </svg>
-      <span class="label">Option 7 — Split Color Bold</span>
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#111"/>
+            <path d="M21 20 L21 46 Q21 62 40 62 Q59 62 59 46 L59 20" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <rect x="21" y="52" width="38" height="10" rx="5" fill="#fff"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#111"/>
+            <path d="M21 20 L21 46 Q21 62 40 62 Q59 62 59 46 L59 20" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <rect x="21" y="52" width="38" height="10" rx="5" fill="#fff"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 5 · Black</span>
     </div>
 
-    <!-- Option 8: Minimalist dot accent -->
-    <div class="card dark">
-      <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-2">umove</text>
-        <circle cx="195" cy="10" r="8" fill="#00C2A8"/>
-      </svg>
-      <span class="label">Option 8 — Minimal Dot (Dark)</span>
+    <!-- OPTION 6: Green, U with checkmark -->
+    <div class="card">
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#1DB954"/>
+            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <polyline points="30,58 37,65 52,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#1DB954"/>
+            <path d="M22 22 L22 46 Q22 60 40 60 Q58 60 58 46 L58 22" stroke="#fff" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <polyline points="30,58 37,65 52,50" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 6 · Green</span>
+    </div>
+
+    <!-- OPTION 7: Sunrise gradient -->
+    <div class="card">
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g7" x1="0" y1="80" x2="80" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FF5C35"/>
+                <stop offset="100%" stop-color="#FFB800"/>
+              </linearGradient>
+            </defs>
+            <rect width="80" height="80" rx="18" fill="url(#g7)"/>
+            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g7b" x1="0" y1="80" x2="80" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FF5C35"/>
+                <stop offset="100%" stop-color="#FFB800"/>
+              </linearGradient>
+            </defs>
+            <rect width="80" height="80" rx="18" fill="url(#g7b)"/>
+            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 7 · Sunset</span>
+    </div>
+
+    <!-- OPTION 8: Navy + gold U -->
+    <div class="card">
+      <div class="sizes">
+        <div class="size-col">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#0A1F44"/>
+            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#FFB800" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Logo</div>
+        </div>
+        <div class="size-col">
+          <svg width="44" height="44" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="80" height="80" rx="18" fill="#0A1F44"/>
+            <path d="M20 20 L20 46 Q20 62 40 62 Q60 62 60 46 L60 20" stroke="#FFB800" stroke-width="8" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div class="size-label">Widget</div>
+        </div>
+      </div>
+      <span class="label">Option 8 · Navy + Gold</span>
     </div>
 
   </div>
